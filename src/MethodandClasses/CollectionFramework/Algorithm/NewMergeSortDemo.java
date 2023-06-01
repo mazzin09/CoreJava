@@ -34,7 +34,7 @@ public class NewMergeSortDemo {
         int j = middle+1;
         int k = lowerIndex;
 
-        while(i <= middle && j <= higherIndex){
+        while(i < middle && j < higherIndex){
             if (tempArr[i] <= tempArr[j]){
                 arr[k] = tempArr[i];
                 i++;
@@ -45,12 +45,12 @@ public class NewMergeSortDemo {
             }
             k++;
         }
-        while (i <= middle){
+        while (i < middle){
             arr[k] = tempArr[i];
             i++;
             k++;
         }
-        while (j <= higherIndex){
+        while (j < higherIndex){
             arr[k] = tempArr[j];
             j++;
             k++;
@@ -66,7 +66,7 @@ public class NewMergeSortDemo {
 
 
     public static void main(String[] args) {
-        int array[] = {45,23,14,43,26,75};
+        int array[] = {1,4,2,5,8,7};
         NewMergeSortDemo ms = new NewMergeSortDemo();
         ms.sort(array);
         printArray(array);
